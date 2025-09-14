@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Dashboard ERP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="login-page" class="page">
+        <h2>Login</h2>
+        <input type="text" id="name" placeholder="Enter your name">
+        <input type="text" id="roll" placeholder="Enter Roll Number">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <!-- Dashboard Page -->
+    <div id="dashboard-page" class="page hidden">
+        <h2>Welcome, <span id="student-name"></span></h2>
+        <button onclick="logout()" class="logout-btn">Logout</button>
+
+        <div class="section">
+            <h3>Profile</h3>
+            <p>Name: <span id="profile-name"></span></p>
+            <p>Roll Number: <span id="profile-roll"></span></p>
+            <p>Department: <span id="profile-dept">CSE</span></p>
+            <button onclick="editProfile()">Edit Profile</button>
+        </div>
+
+        <div class="section">
+            <h3>Subjects & Attendance</h3>
+            <ul id="subjects-list">
+                <li>Maths - Attendance: 90%</li>
+                <li>Physics - Attendance: 85%</li>
+                <li>CS - Attendance: 95%</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Marks / Grades</h3>
+            <ul id="marks-list">
+                <li>Maths - 88</li>
+                <li>Physics - 80</li>
+                <li>CS - 92</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Notice Board</h3>
+            <ul id="notice-list">
+                <li>Semester exams start from 10th Oct.</li>
+                <li>Submit project reports by 20th Sep.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
